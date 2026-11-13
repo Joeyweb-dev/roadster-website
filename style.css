@@ -1,0 +1,608 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #090909;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    width: 100%;
+    min-height: 85px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #090909;
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #e32636;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    font-size: 13px;
+    color: #bbb;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #e32636;
+}
+
+.nav-button {
+    padding: 13px 22px;
+    border: 1px solid #e32636;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: #e32636;
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+    padding: 100px 8% 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    background:
+        radial-gradient(circle at 75% 50%, #252020 0%, #090909 55%);
+}
+
+.hero-content {
+    max-width: 490px;
+}
+
+.eyebrow {
+    color: #e32636;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(65px, 8vw, 105px);
+    line-height: 0.95;
+    font-weight: 900;
+    letter-spacing: -5px;
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.config-header h2 span,
+.technology h2 span {
+    color: #e32636;
+}
+
+.hero-description {
+    color: #aaa;
+    line-height: 1.8;
+    font-size: 14px;
+    margin: 30px 0;
+    max-width: 420px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    padding: 16px 24px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-button {
+    background: #e32636;
+    color: white;
+}
+
+.primary-button:hover {
+    background: #ad1522;
+    transform: translateY(-3px);
+}
+
+.secondary-button {
+    border: 1px solid #555;
+}
+
+.secondary-button:hover {
+    border-color: #e32636;
+}
+
+.hero-visual {
+    width: 55%;
+    max-width: 700px;
+}
+
+.visual-label,
+.visual-caption {
+    display: flex;
+    justify-content: space-between;
+    color: #aaa;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.visual-label span {
+    color: #e32636;
+    font-weight: bold;
+}
+
+.car-illustration {
+    width: 100%;
+    margin: 20px 0;
+    overflow: visible;
+}
+
+/* VEHICLE SECTION */
+
+.vehicle-section {
+    padding: 110px 8%;
+    background: #101010;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin-bottom: 60px;
+}
+
+.section-heading h2,
+.config-header h2,
+.technology h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.section-heading > p:last-child,
+.config-header > p:last-child {
+    color: #999;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.spec-card {
+    padding: 35px;
+    background: #171717;
+    border: 1px solid #292929;
+    transition: 0.3s;
+}
+
+.spec-card:hover {
+    border-color: #e32636;
+    transform: translateY(-5px);
+}
+
+.spec-card span {
+    color: #e32636;
+    font-size: 13px;
+}
+
+.spec-card h3 {
+    margin: 25px 0 12px;
+    font-size: 20px;
+}
+
+.spec-card p {
+    color: #999;
+    line-height: 1.7;
+    font-size: 13px;
+}
+
+/* CONFIGURATOR */
+
+.configurator {
+    padding: 110px 8%;
+    background: #080808;
+}
+
+.config-header {
+    margin-bottom: 60px;
+}
+
+.config-layout {
+    display: grid;
+    grid-template-columns: 1.6fr 0.8fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.config-car {
+    background: #151515;
+    padding: 25px;
+    border: 1px solid #292929;
+}
+
+.config-top,
+.config-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+.config-illustration {
+    width: 100%;
+    margin: 40px 0;
+}
+
+#configCarBody {
+    transition: fill 0.4s ease;
+}
+
+.config-options h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.config-options > p {
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.colour-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.colour-button {
+    background: #151515;
+    border: 1px solid #333;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.colour-button:hover,
+.colour-button.active {
+    border-color: #e32636;
+    background: #201516;
+}
+
+.colour-dot {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #777;
+}
+
+.red {
+    background: #c62828;
+}
+
+.white {
+    background: #e8e8e8;
+}
+
+.black {
+    background: #151515;
+}
+
+.blue {
+    background: #174b91;
+}
+
+.selection-summary {
+    padding: 25px 0;
+    margin: 30px 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.selection-summary p {
+    color: #999;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.selection-summary h3 {
+    color: #e32636;
+}
+
+.selection-summary small {
+    color: #777;
+}
+
+.full-button {
+    text-align: center;
+    width: 100%;
+}
+
+/* TECHNOLOGY */
+
+.technology {
+    padding: 110px 8%;
+    background: #151515;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.technology-content {
+    max-width: 500px;
+}
+
+.technology-content > p:not(.eyebrow) {
+    color: #999;
+    line-height: 1.8;
+    font-size: 14px;
+    margin: 25px 0 30px;
+}
+
+.technology-box {
+    width: 350px;
+    height: 300px;
+    border: 1px solid #444;
+    background: linear-gradient(135deg, #251416, #101010);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-symbol {
+    font-size: 130px;
+    font-weight: 900;
+    color: #e32636;
+}
+
+.technology-box p {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.technology-box span {
+    margin-top: 10px;
+    font-size: 9px;
+    color: #888;
+    letter-spacing: 3px;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+    padding: 110px 8%;
+}
+
+.contact h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    margin-bottom: 20px;
+}
+
+.contact > p:not(.eyebrow) {
+    color: #999;
+    line-height: 1.8;
+    font-size: 14px;
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 50px 8%;
+    background: #050505;
+    border-top: 1px solid #222;
+    text-align: center;
+}
+
+footer p {
+    color: #777;
+    font-size: 12px;
+    margin: 20px 0;
+}
+
+.copyright {
+    color: #555;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero {
+        padding: 80px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-visual {
+        width: 100%;
+    }
+
+    .config-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .technology {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        min-height: 75px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar nav {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #101010;
+        padding: 25px;
+        flex-direction: column;
+        border-bottom: 1px solid #333;
+    }
+
+    .navbar nav.show {
+        display: flex;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 75px;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .spec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vehicle-section,
+    .configurator,
+    .technology,
+    .contact {
+        padding: 75px 6%;
+    }
+
+    .config-car {
+        padding: 15px;
+    }
+
+    .technology-box {
+        width: 100%;
+    }
+
+    .config-top,
+    .config-bottom {
+        font-size: 8px;
+    }
+
+}
+/* WEBSITE LOADING ANIMATION */
+
+.loader {
+    position: fixed;
+    inset: 0;
+    background: #090909;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.loader h1 {
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+
+.loader h1 span {
+    color: #e32636;
+}
+
+.loader p {
+    margin-top: 15px;
+    color: #888;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.loader.hide {
+    opacity: 0;
+    visibility: hidden;
+}

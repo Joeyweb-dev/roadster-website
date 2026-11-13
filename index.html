@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Roadster | 3D Configurator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            ROAD<span>STER.</span>
+        </a>
+    
+        <nav id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="#vehicle">Vehicle</a>
+            <a href="#configure">Configure</a>
+            <a href="#technology">Technology</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    
+        <a href="#configure" class="nav-button">
+            Configure Yours
+        </a>
+    
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+    
+    </header>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="tagline">THE FUTURE OF PERFORMANCE</p>
+
+            <h1>BEYOND<br>ORDINARY.</h1>
+
+            <p>
+                Experience a new vision of electric performance
+                through design, innovation and technology.
+            </p>
+
+            <a href="#configure" class="main-button">
+                Configure Yours
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- 3D CAR SECTION -->
+
+    <section class="configurator" id="configure">
+
+        <div class="section-heading">
+
+            <p class="tagline">YOUR DESIGN. YOUR CHOICE.</p>
+
+            <h2>Build Your Roadster</h2>
+
+            <p>Rotate the vehicle and explore its appearance.</p>
+
+        </div>
+
+
+        <div class="car-viewer" id="carViewer">
+
+            <div class="viewer-label">
+                INTERACTIVE 3D VIEW
+            </div>
+
+        </div>
+
+
+        <!-- COLOUR OPTIONS -->
+
+        <div class="customization">
+
+            <h3>Choose Your Exterior Colour</h3>
+
+            <div class="color-options">
+
+                <button class="color active"
+                    data-color="red">
+                    Red
+                </button>
+
+                <button class="color"
+                    data-color="black">
+                    Black
+                </button>
+
+                <button class="color"
+                    data-color="white">
+                    White
+                </button>
+
+                <button class="color"
+                    data-color="blue">
+                    Blue
+                </button>
+
+            </div>
+
+
+            <!-- CONFIGURATION SUMMARY -->
+
+            <div class="configuration-summary">
+
+                <h3>Your Configuration</h3>
+
+                <p id="summaryColor">
+                    Exterior Colour: Red
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="features" id="features">
+
+        <div class="section-heading">
+
+            <p class="tagline">ENGINEERED FOR EXCELLENCE</p>
+
+            <h2>Performance Meets Design</h2>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <h3>Electric Power</h3>
+
+                <p>
+                    A concept built around modern electric
+                    performance and innovation.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <h3>Aerodynamic Design</h3>
+
+                <p>
+                    Sculpted exterior styling inspired by
+                    high-performance sports cars.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <h3>Driver Focused</h3>
+
+                <p>
+                    A design concept focused on the
+                    connection between driver and machine.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESERVATION / ENQUIRY -->
+
+    <section class="reservation" id="reservation">
+
+        <div class="section-heading">
+
+            <p class="tagline">STAY CONNECTED</p>
+
+            <h2>Request More Information</h2>
+
+            <p>
+                Submit a demonstration enquiry using the form below.
+            </p>
+
+        </div>
+
+
+        <form id="reservationForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Your Phone Number"
+                required
+            >
+
+            <button type="submit">
+                Submit Enquiry
+            </button>
+
+            <p id="formMessage"></p>
+
+        </form>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>ROADSTER<span>.</span></h2>
+
+        <p>
+            Independent automotive design concept.
+            Not affiliated with Tesla.
+        </p>
+
+        <p class="copyright">
+            © 2026 Roadster Concept. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>
